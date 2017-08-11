@@ -7,7 +7,9 @@ var { Pool, Client } = require('pg')
 
 //DB Global variables:
 //this variables are known only in this module. (index.js)
+//var constring = 'postgresql://postgres:123@localhost:5432/postgres'
 var constring = 'postgresql://postgres:123@localhost:5432/postgres'
+var constring = 'postgres://xvsxbzdclqjwhk:5c4dcbdf1ff74529999cd901fe97c33e7f6a2d86f50308100b610deeaacbe66e@ec2-54-227-252-202.compute-1.amazonaws.com:5432/d9sdo0h3t1gemu'
 var pool = new Pool({connectionString : constring});
 
 /* GET form page. */
