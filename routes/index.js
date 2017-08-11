@@ -52,8 +52,6 @@ router.get('/api/addStudent', function(req, res){
   }else{
     return res.json({err:'bad request'});
   }
-
- 
 });
 
 router.get('/createStudentsTable', function(req, res) {
