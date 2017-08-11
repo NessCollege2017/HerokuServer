@@ -56,10 +56,16 @@ router.get('/api/addStudent', function(req, res){
  
 });
 
-router.get('/hodor', function(req, res) {
-  var q = req.query;
-  print(q);
-  res.render('hodor', {name:'hodor', friend:'aria', title:'hodor'});
-});
+router.get('/createStudentsTable', function(req, res) {
+  var SQL = "CREATE TABLE Students(id SERIAL, name TEXT, lastName TEXT)";
 
+  pool.query(SQL, [], function(err, dbResult){
+    if(err){
+      return res.json(err);
+    }
+
+    return res.json({message: "db created Successfully"})
+  })
+});
+ 
 module.exports = router;
